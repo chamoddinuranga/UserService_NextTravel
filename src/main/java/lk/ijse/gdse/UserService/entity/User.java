@@ -11,7 +11,7 @@ import lombok.ToString;
 @Data
 @ToString
 @Entity
-public class RegisteredUser implements SuperEntity{
+public class User implements SuperEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String userId;
@@ -19,10 +19,9 @@ public class RegisteredUser implements SuperEntity{
     private String firstName;
     @Column(nullable = false)
     private String lastName;
+    private String gender;
     @Column(nullable = false)
-    private String userType;
-    @Column(nullable = false)
-    private String id;
+    private String userNIC;
     @Column(nullable = false)
     private String email;
     @Column(nullable = false)
@@ -31,6 +30,6 @@ public class RegisteredUser implements SuperEntity{
     private String contactNumber;
     @Column(nullable = false)
     private byte profilePicture;
-    private byte idFrontPhoto;
-    private byte idBackPhoto;
+    private byte NICFrontPhoto;
+    private byte NICBackPhoto;
 }
